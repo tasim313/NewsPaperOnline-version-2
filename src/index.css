@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 220 20% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 10%;
+
+    --primary: 0 75% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 15% 95%;
+    --secondary-foreground: 220 20% 15%;
+
+    --muted: 220 10% 92%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 35 90% 55%;
+    --accent-foreground: 220 20% 10%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 0 75% 45%;
+
+    --radius: 0.25rem;
+
+    /* News specific tokens */
+    --news-headline: 220 25% 8%;
+    --news-category: 0 75% 45%;
+    --news-date: 220 10% 50%;
+    --news-divider: 220 15% 85%;
+    
+    /* Ad specific tokens */
+    --ad-bg: 220 15% 96%;
+    --ad-border: 220 15% 88%;
+    --ad-label: 220 10% 60%;
+    
+    /* Header/Footer */
+    --header-bg: 0 75% 40%;
+    --header-text: 0 0% 100%;
+    --footer-bg: 220 25% 12%;
+    --footer-text: 220 10% 85%;
+  }
+}
+
+/* Custom font imports */
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Tiro+Bangla:ital@0;1&display=swap');
+
+/* Typography classes */
+.font-headline {
+  font-family: 'Hind Siliguri', sans-serif;
+}
+
+.font-body {
+  font-family: 'Tiro Bangla', 'Hind Siliguri', serif;
+}
+
+/* Animation utilities */
+@keyframes ticker {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.animate-ticker {
+  animation: ticker 20s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+/* Ad placeholder styling */
+.ad-placeholder {
+  background: repeating-linear-gradient(
+    45deg,
+    hsl(var(--ad-bg)),
+    hsl(var(--ad-bg)) 10px,
+    hsl(var(--ad-border)) 10px,
+    hsl(var(--ad-border)) 11px
+  );
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
