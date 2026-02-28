@@ -48,9 +48,15 @@ const Header = () => {
 
           {/* Logo and Search */}
           <div className="flex items-center justify-between py-4">
-            <Link to="/" className="font-headline text-3xl md:text-4xl font-bold tracking-tight hover:opacity-90 transition-opacity">
-              দৈনিক সংবাদ
-            </Link>
+          <Link to="/" className="flex items-center gap-2 hover:opacity-90 transition-opacity">
+          <img 
+          src="/logo.jpeg" alt="logo" 
+            className="h-10 w-auto"
+          />
+            {/* <span className="font-headline text-3xl md:text-4xl font-bold tracking-tight">
+              bangla gazeta
+            </span> */}
+          </Link>
             <div className="flex items-center gap-3">
               <div className="hidden md:flex items-center bg-primary-foreground/10 rounded-full px-4 py-2">
                 <input 
