@@ -43,7 +43,10 @@ const Footer = () => {
             {/* Logo and About */}
             <div className="lg:col-span-2">
               <Link to="/" className="font-headline text-2xl font-bold text-primary-foreground mb-4 block">
-                দৈনিক সংবাদ
+              <img 
+                src="/logo.jpeg" alt="logo" 
+                className="h-10 w-auto"
+              />
               </Link>
               <p className="text-sm font-body opacity-80 mb-4">
                 বাংলাদেশের সবচেয়ে বিশ্বস্ত সংবাদ মাধ্যম। আমরা সত্য ও নিরপেক্ষ সংবাদ পরিবেশনে প্রতিশ্রুতিবদ্ধ। 
@@ -153,8 +156,8 @@ const Footer = () => {
         {/* Copyright */}
         <div className="border-t border-primary-foreground/10 py-4">
           <div className="container mx-auto text-center text-sm opacity-60">
-            <p>© ২০২৬ দৈনিক সংবাদ। সর্বস্বত্ব সংরক্ষিত।</p>
-            <p className="mt-1">সম্পাদক: মোহাম্মদ আলী</p>
+            {/* <p>© ২০২৬ দৈনিক সংবাদ। সর্বস্বত্ব সংরক্ষিত।</p>
+            <p className="mt-1">সম্পাদক: মোহাম্মদ আলী</p> */}
           </div>
         </div>
       </div>
